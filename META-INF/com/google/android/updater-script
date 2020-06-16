@@ -1,0 +1,9 @@
+ui_print("                Ugg Vendor Patch                ");
+ui_print("   for porting ugglite treble based rom only    ");
+mount("ext4", "/dev/block/bootdevice/by-name/cust", "/vendor");
+package_extract_dir("acdb/vendor", "/vendor");
+package_extract_dir("camera-override/vendor", "/vendor");
+package_extract_dir("egl/vendor", "/vendor");
+ui_print("                                                ");
+ui_print("Done!");
+ui_print("Remember to edit build.prop and flash ugg kernel!");
